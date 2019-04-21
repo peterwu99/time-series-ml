@@ -14,7 +14,7 @@ class MLP(nn.Module):
         num_layers = args.num_layers
         model_type = args.model_type
         dropout = args.dropout
-        self.use_softmax = args.softmax
+
 
         hidden_dims = [hidden_dim for _ in range(num_layers)]
         if model_type == 'funnel':
@@ -36,8 +36,7 @@ class MLP(nn.Module):
         for i, l in enumerate(self.fc_layers):
             x = self.fc_layers[i](x)
         x = self.output(x)
-        if self.use_softmax:
-            x = F.softmax(x, 1)
+
         return x
 
 
