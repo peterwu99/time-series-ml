@@ -12,7 +12,7 @@
 
  - Activate virtual environment if using one, e.g. ```source ~/ml_env/bin/activate```
 
- - To run ComParE baseline: ```cd data```, then ```python3 baseline.py```
+ - To run ComParE baseline: ```cd data/baseline```, then ```python3 baseline.py```
 
  - To run our baseline: ```python3 main.py -data ComParE -model MLP```
 
